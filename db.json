@@ -1,0 +1,94 @@
+{
+    "shoes": [
+      {
+        "id": 1,
+        "brand": "Nike",
+        "model": "Air Max 270",
+        "color": "Black/White",
+        "price": 150,
+        "stock": 35,
+        "image_url":"https://cdn.thewirecutter.com/wp-content/media/2024/05/running-shoes-2048px-9718.jpg"
+      },
+      {
+        "id": 2,
+        "brand": "Adidas",
+        "model": "Ultraboost 21",
+        "color": "Core Black/Solar Red",
+        "price": 180,
+        "stock": 50,
+        "image_url":"https://media.cnn.com/api/v1/images/stellar/prod/allbirds-sneakers-review-tree-runnerjpg.jpg?c=16x9&q=h_720,w_1280,c_fill"
+      },
+      {
+        "id": 3,
+        "brand": "Puma",
+        "model": "RS-X3",
+        "color": "White/Gray",
+        "price": 110,
+        "stock": 20,
+        "image_url":"https://images.othoba.com/images/thumbs/0550994_pu-leather-sneaker-shoe-for-men.jpeg"
+      },
+      {
+        "id": 4,
+        "brand": "New Balance",
+        "model": "574",
+        "color": "Navy/White",
+        "price": 90,
+        "stock": 45,
+        "image_url":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOYDXaOzSWq_FDCKuO-wrlE2cQaWxbB1Z9lQv48iKcbA&s"
+      },
+      {
+        "id": 5,
+        "brand": "ASICS",
+        "model": "Gel-Kayano 27",
+        "color": "Black/Blue",
+        "price": 160,
+        "stock": 30,
+        "image_url":"https://i5.walmartimages.com/seo/Eashery-Shoes-for-Men-Sport-Workout-Sneakers-Comfortable-Men-Shoes-Black-10_aa500205-ba8a-4b5b-83b3-6fbeef678ddc.480f707bdd92c6873286f95a0e4d324a.jpeg"
+      },
+      {
+        "id": 6,
+        "brand": "Reebok",
+        "model": "Nano X1",
+        "color": "White/Gum",
+        "price": 130,
+        "stock": 40,
+        "image_url":"https://cdn.thewirecutter.com/wp-content/media/2024/05/running-shoes-2048px-9718.jpg"
+      },
+      {
+        "id": 7,
+        "brand": "Converse",
+        "model": "Chuck Taylor All Star",
+        "color": "Black/White",
+        "price": 55,
+        "stock": 100,
+        "image_url":"https://i5.walmartimages.com/seo/Eashery-Shoes-for-Men-Sport-Workout-Sneakers-Comfortable-Men-Shoes-Black-10_aa500205-ba8a-4b5b-83b3-6fbeef678ddc.480f707bdd92c6873286f95a0e4d324a.jpeg"
+      },
+      {
+        "id": 8,
+        "brand": "Vans",
+        "model": "Old Skool",
+        "color": "Black/White",
+        "price": 60,
+        "stock": 70,
+        "image_url":"https://cdn.thewirecutter.com/wp-content/media/2024/05/running-shoes-2048px-9718.jpg"
+      },
+      {
+        "id": 9,
+        "brand": "Under Armour",
+        "model": "HOVR Phantom 2",
+        "color": "Gray/White",
+        "price": 140,
+        "stock": 25,
+        "image_url":"https://i5.walmartimages.com/seo/Eashery-Shoes-for-Men-Sport-Workout-Sneakers-Comfortable-Men-Shoes-Black-10_aa500205-ba8a-4b5b-83b3-6fbeef678ddc.480f707bdd92c6873286f95a0e4d324a.jpeg"
+      },
+      {
+        "id": 10,
+        "brand": "Brooks",
+        "model": "Ghost 13",
+        "color": "Blue/White",
+        "price": 130,
+        "stock": 35,
+        "image_url":"https://media.cnn.com/api/v1/images/stellar/prod/allbirds-sneakers-review-tree-runnerjpg.jpg?c=16x9&q=h_720,w_1280,c_fill"
+      }
+    ]
+  }  
