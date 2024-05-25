@@ -39,7 +39,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
        <p className="mr-2">Signed In: {user?.email}</p>
-    {user && <a onClick={handleLogOut} className="btn btn-secondary">LogOut</a>}
+    {user && <a onClick={handleLogOut} className="btn bg-rose-500 text-white">LogOut</a>}
   </div>
 </div>
     );

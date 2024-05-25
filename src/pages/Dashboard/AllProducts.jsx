@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import SingleProductCard from "./SingleProductCard";
+import SingleProductDashboard from "./SingleProductDashboard";
 
 const AllProducts = () => {
 
@@ -11,10 +11,10 @@ const AllProducts = () => {
            <div className="flex flex-wrap">
             {
                 shoes.map(shoe => 
-                <SingleProductCard 
+                <SingleProductDashboard
                     key={shoe.id}
                     shoe={shoe}>
-                </SingleProductCard>)
+                </SingleProductDashboard>)
             }
            </div>
         </div>

@@ -9,6 +9,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Dashboard from "../pages/Dashboard";
 import AllProducts from "../pages/Dashboard/AllProducts";
 import AddProduct from "../pages/Dashboard/AddProduct";
+import ProductDetails from "../pages/ProductDetails";
 
     export const router = createBrowserRouter([
     {
@@ -21,7 +22,13 @@ import AddProduct from "../pages/Dashboard/AddProduct";
             loader: async () => {
                 return fetch(`http://localhost:3000/shoes`)
             }
-        
+        },
+        {
+            path: "/products/:id",
+            element: <ProductDetails></ProductDetails>,
+            loader: async ({params}) => {
+                return fetch(`http://localhost:3000/shoes/${params.id}`)
+            }
         },
         {
             path: "/about",

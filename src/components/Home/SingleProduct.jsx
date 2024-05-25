@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
 const SingleProduct = ({shoe}) => {
   // eslint-disable-next-line react/prop-types
-  const {model, brand, color, price, image_url, stock} = shoe;
+  const {id, model, brand, color, price, image_url, stock} = shoe;
 
     return (
       <div className="card w-72 shadow-xl mb-12 ml-12 my-5">
@@ -17,7 +19,9 @@ const SingleProduct = ({shoe}) => {
 <div className="badge badge-outline">Stock Available: {stock}</div>
 <div className="badge badge-outline">Selling Price: {price} $</div>
 </div>
-<button className="btn bg-rose-400 rounded-xl w-[100px] p-3 mt-4 text-white">See Details</button>
+<button className="btn bg-rose-400 rounded-xl w-[100px] p-3 mt-4 text-white">
+      <Link to={`/products/${id}`}>See Details</Link>
+    </button>
 </div>
 </div>
     );
