@@ -5,9 +5,9 @@ const Products = () => {
     const shoes = useLoaderData();
 
     return (
-        <div>
+        <div className="px-10">
             <h1 className="text-center font-bold text-4xl my-6">Our Products</h1>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-center">
             {
                 shoes?.slice(0, 6)?.map(shoe => <SingleProduct
                 key={shoe.id}

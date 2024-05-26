@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const AddProduct = () => {
+    const [success, setSuccess] = useState(false);
+
     const handleSubmit = async (e)=> {
         e.preventDefault();
 
@@ -12,8 +16,10 @@ const AddProduct = () => {
         const image_url = form.image_url.value;
 
         const productData = {id, model, brand, price, stock, color, image_url};
-        
-        //Evaluating POST method to Add Product
+
+        const isAdd = window.confirm("Are you sure to add this product?")
+        if(isAdd){
+             //Evaluating POST method to Add Product
         await fetch("http://localhost:3000/shoes", {
             method: "POST",
             headers: {
@@ -22,13 +28,27 @@ const AddProduct = () => {
             body: JSON.stringify(productData),
         })
         .then(res => res.json())
-        .then(data => { 
-            console.log(data);
-            form.reset();
-        })
-    }
+        // eslint-disable-next-line no-unused-vars
+        .then(data => 
+            console.log(data),
+            setSuccess(true),
+            form.reset(),
+            setTimeout(() => {
+                setSuccess(false);
+            }, 2000)
+        )
+        }
+        }
     return (
         <div>
+            {
+                success &&
+                <div className="toast toast-top toast-center">
+                <div className="alert bg-rose-400 font-bold">
+                    <span>Product is Added Successfully</span>
+                </div>
+                </div>
+            }
            <div className="my-10">
            <h1 className="text-rose-500 text-3xl font-bold">Add New Product</h1>
            <hr />

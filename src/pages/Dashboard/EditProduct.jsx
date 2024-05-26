@@ -4,6 +4,8 @@ import { useLoaderData } from "react-router-dom";
 const EditProduct = () => {
     const editableData = useLoaderData();
 
+    const [success, setSuccess] = useState(false)
+
     const [id, setId] = useState(editableData.id);
     const [model, setModel] = useState(editableData.model);
     const [brand, setBrand] = useState(editableData.brand);
@@ -27,7 +29,9 @@ const EditProduct = () => {
 
         const productData = {id, model, brand, price, stock, color, image_url};
         
-        //Evaluating PATCH method to edit Product
+        const isEdit = window.confirm("Are you sure to update this product?");
+        if(isEdit){
+            //Evaluating PATCH method to edit Product
         await fetch(`http://localhost:3000/shoes/${editableData.id}`,{
             method: "PATCH",
             headers: {
@@ -36,10 +40,24 @@ const EditProduct = () => {
             body: JSON.stringify(productData)
         })
         .then(res => res.json())
-        .then(data => console.log(data, "is successfully edited"))
+        .then(data => console.log(data),
+            setSuccess(true),
+            setTimeout(() => {
+                setSuccess(false);
+            }, 2000)
+        )
     }
+        }
     return (
         <div>
+            {
+                success &&
+                <div className="toast toast-top toast-center">
+                <div className="alert bg-green-400 font-bold">
+                    <span>Product is updated Successfully</span>
+                </div>
+                </div>
+            }
            <div className="my-10">
            <h1 className="text-rose-500 text-3xl font-bold">Edit Product</h1>
            <hr />

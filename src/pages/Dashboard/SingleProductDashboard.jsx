@@ -1,21 +1,39 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const SingleProductDashboard = ({shoe}) => {
+    const [success, setSuccess] = useState(false);
     // eslint-disable-next-line react/prop-types
     const {id, model, brand, color, price, image_url, stock} = shoe;
 
     const handleDelete = async ()=> {
-        await fetch(`http://localhost:3000/shoes/${id}`, {
+        const isDelete = window.confirm("Are you to delete this product?");
+        if(isDelete){
+            await fetch(`http://localhost:3000/shoes/${id}`, {
             method:"DELETE"
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data, "Successfully Deleted")
+            console.log(data),
+            setSuccess(true),
+            setTimeout(() => {
+                setSuccess(false);
+            }, 2000);
         })
+        }
     }
 
     return (
+        <>
+        {
+        success &&
+            <div className="toast toast-top toast-center">
+            <div className="alert bg-red-500 font-bold">
+                <span>Product is deleted Successfully</span>
+            </div>
+            </div>
+        }
             <div className="card w-72 shadow-xl mb-12 ml-12 my-5">
             <img className="w-full h-2/4" src={image_url} alt="shoe" />
         <div className="mt-4 ml-4">
@@ -39,11 +57,12 @@ const SingleProductDashboard = ({shoe}) => {
             <Link to={`edit-product/${id}`}>Edit</Link>
         </button> <br />
         <button onClick={handleDelete} className="btn bg-red-500 rounded-xl w-[80px] text-white">
-            X Delete
+            Delete
         </button>
         </div>
         </div>
         </div>
+        </>
     );
 };
 
