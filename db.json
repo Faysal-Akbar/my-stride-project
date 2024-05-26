@@ -32,8 +32,8 @@
       "brand": "New Balance",
       "model": "574",
       "color": "Navy/White",
-      "price": 90,
-      "stock": 45,
+      "price": "95",
+      "stock": "45",
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOYDXaOzSWq_FDCKuO-wrlE2cQaWxbB1Z9lQv48iKcbA&s"
     },
     {
@@ -89,15 +89,6 @@
       "price": 130,
       "stock": 35,
       "image_url": "https://media.cnn.com/api/v1/images/stellar/prod/allbirds-sneakers-review-tree-runnerjpg.jpg?c=16x9&q=h_720,w_1280,c_fill"
-    },
-    {
-      "id": "12",
-      "model": "Ajax-2024",
-      "brand": "Lotto",
-      "price": "130",
-      "stock": "10",
-      "color": "Purple",
-      "image_url": "https://cdn.shopify.com/s/files/1/0591/4234/0785/products/213627_8SQ_47099b46-aabc-4983-aaff-36ab70718367.jpg?v=1677079174"
     }
   ]
 }

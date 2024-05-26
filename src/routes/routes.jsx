@@ -10,6 +10,7 @@ import Dashboard from "../pages/Dashboard";
 import AllProducts from "../pages/Dashboard/AllProducts";
 import AddProduct from "../pages/Dashboard/AddProduct";
 import ProductDetails from "../pages/ProductDetails";
+import EditProduct from "../pages/Dashboard/EditProduct";
 
     export const router = createBrowserRouter([
     {
@@ -75,6 +76,18 @@ import ProductDetails from "../pages/ProductDetails";
                         <AddProduct></AddProduct>
                     </PrivateRoutes>
                 )
+            },
+            {
+                path: "all-products/edit-product/:id",
+                element: (
+                    <PrivateRoutes>
+                        <EditProduct></EditProduct>
+                    </PrivateRoutes>
+                ),
+                loader: async ({params})=> {
+                    return fetch(`http://localhost:3000/shoes/${params.id}`)
+                }
+
             },
         ]
         
